@@ -1,0 +1,7 @@
+<h1>Carteira</h1>
+<p>BTC:{{cyroWallet.saldoBitcoin}} R$</p>
+<p>BRL: {{cyroWallet.saldoBitcoin * cyroWallet.bitCoinRate[cyroWallet.bitCoinRate.length-1].bpi.BRL.rate_float}}</p>
+<p>USD: {{cyroWallet.saldoBitcoin * cyroWallet.bitCoinRate[cyroWallet.bitCoinRate.length-1].bpi.USD.rate_float}}</p>
+<input type="number" [(ngModel)]="cyroWallet.valorRecebido"/>
+<button (click)="cyroWallet.acresValue()">Acrescentar</button>
+<button (click)="cyroWallet.decresValue()">Remover</button>

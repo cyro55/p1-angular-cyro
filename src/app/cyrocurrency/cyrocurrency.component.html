@@ -1,0 +1,22 @@
+<h1>Histórico de Cotações</h1>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Data/hora</th>
+      <th>USD</th>
+      <th>BTC<th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rate of this.cyroWallet.bitCoinRate">
+      <td>{{rate.time.updated}}</td>
+      <td>R$ 
+        {{(rate.bpi.BRL.rate_float/rate.bpi.USD.rate_float).toFixed(5)}}
+      </td>
+      <td>R$ 
+        {{rate.bpi.BRL.rate_float}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+        
